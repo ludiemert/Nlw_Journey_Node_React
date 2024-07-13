@@ -27,7 +27,7 @@ Content-Type: application/json
 
 {
   "destination": "Bahia",
-  "starts_at": "2024-07-13 18:00:00",
+  "starts_at": "2024-07-14 18:00:00",
   "ends_at": "2024-07-25 18:00:00",
   "owner_name": "Lu Reis",
   "owner_email": "lu@gmail.com",
@@ -36,6 +36,23 @@ Content-Type: application/json
     "ana@terra.com"
   ]
 }
+
+### Confirmacao da viagem, ver email se ok
+GET  http://localhost:3333/trips/487fe6cd-ab98-4d7b-95aa-eedb33276709/confirm
+Content-Type: application/json
+{
+  
+}
+
+
+### Confirmacao do participante 
+GET  http://localhost:3333/participants/10c36176-fc6f-4bc8-b2c0-ed8b344f6a88/confirm
+
+
+
+
+
+
 
 
 
