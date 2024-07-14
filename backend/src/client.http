@@ -108,3 +108,14 @@ Content-Type: application/json
   "ends_at": "2024-07-27 18:00:00"
 }
 
+
+//Trip details   => getTripDetails
+### Update trips
+GET  http://localhost:3333/trips/424a263b-8c29-4ef4-99e0-feb2597a4d2f
+Content-Type: application/json
+
+
+//Particpant = > getParticipant
+### listar 1  Participant - getParticipant
+GET http://localhost:3333/participants/1a6d2c4e-b322-48ad-8d7a-37112363dfa6
+Content-Type: application/json
