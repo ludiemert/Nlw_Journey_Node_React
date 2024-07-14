@@ -49,6 +49,22 @@ Content-Type: application/json
 GET  http://localhost:3333/participants/10c36176-fc6f-4bc8-b2c0-ed8b344f6a88/confirm
 
 
+### Criar Activity - createActivity
+POST http://localhost:3333/trips/38787f5d-2299-4bc3-8d44-a3a8eaf536ed/activities
+Content-Type: application/json
+
+{
+  "title": "Walk",
+  "occurs_at": "2024-06-04 22:38:00"
+}
+// "activityId": "ddaebf77-224f-4043-bc66-ce3684acc87b"
+
+
+### Confirmacao da atividade, ver a atividade criada
+GET  http://localhost:3333/trips/38787f5d-2299-4bc3-8d44-a3a8eaf536ed/activities
+//     "trip_id": "38787f5d-2299-4bc3-8d44-a3a8eaf536ed"
+//      "id": "ddaebf77-224f-4043-bc66-ce3684acc87b",
+
 
 
 

@@ -4,6 +4,8 @@ import { serializerCompiler, validatorCompiler } from "fastify-type-provider-zod
 import { confirmTrip } from "./routes/confirm-trip";
 import cors from '@fastify/cors'
 import { confirmParticipant } from "./routes/confirm-participant";
+import { createActivity } from "./routes/create-activity";
+import { getActivity } from "./routes/get-activities";
 
 const app = fastify()
 
@@ -21,6 +23,9 @@ app.setSerializerCompiler(serializerCompiler);
 app.register(createTrip)
 app.register(confirmTrip)
 app.register(confirmParticipant)
+app.register(createActivity)
+
+app.register(getActivity)
 
 
 app.listen({ port: 3333 }).then(() => {
