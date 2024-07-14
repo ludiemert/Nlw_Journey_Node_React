@@ -12,20 +12,27 @@ import { getParticipants } from "./routes/get-participants";
 import { createInvite } from "./routes/create-invite";
 import { updateTrip } from "./routes/update-trip";
 import { getTripDetails } from "./routes/get-trip-details";
-import { getParticipant } from "./routes/get-particpant";
+import { getParticipant } from "./routes/get-participant";
+import { errorHandler } from "./error-handler";
+import { env } from "./env";
+
 
 const app = fastify()
 
 
 //URL my front-end run for access the API (lib => cors)
 app.register(cors, {
-  origin: 'http://localhost:3000'
+ // origin: 'http://localhost:3000'
+ origin: '*',
 })
 //use origin: '*' all front access API
 
 // Add schema validator and serializer
 app.setValidatorCompiler(validatorCompiler);
 app.setSerializerCompiler(serializerCompiler);
+
+//app.setErrorHandler(errorHandler)
+app.setErrorHandler(errorHandler)
 
 app.register(createTrip)
 app.register(confirmTrip)
@@ -41,6 +48,6 @@ app.register(getTripDetails)
 app.register(getParticipant)
 
 
-app.listen({ port: 3333 }).then(() => {
+app.listen({ port: env.PORT }).then(() => {
   console.log('Server running!!!! 🥰')
 })

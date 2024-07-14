@@ -103,7 +103,7 @@ PUT http://localhost:3333/trips/424a263b-8c29-4ef4-99e0-feb2597a4d2f
 Content-Type: application/json
 
 {
-  "destination": "Bahia - Salvador - Floripa",
+  "destination": "Bahia - Salvador - Florianopoli",
   "starts_at": "2024-07-15 18:00:00",
   "ends_at": "2024-07-27 18:00:00"
 }
