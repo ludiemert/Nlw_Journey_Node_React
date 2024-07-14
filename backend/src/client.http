@@ -50,29 +50,61 @@ GET  http://localhost:3333/participants/10c36176-fc6f-4bc8-b2c0-ed8b344f6a88/con
 
 
 ### Criar Activity - createActivity
-POST http://localhost:3333/trips/38787f5d-2299-4bc3-8d44-a3a8eaf536ed/activities
+POST http://localhost:3333/trips/424a263b-8c29-4ef4-99e0-feb2597a4d2f/activities
 Content-Type: application/json
 
 {
   "title": "Walk",
-  "occurs_at": "2024-06-04 22:38:00"
+  "occurs_at": "2024-07-14 22:38:00"
 }
 // "activityId": "ddaebf77-224f-4043-bc66-ce3684acc87b"
 
 
-### Confirmacao da atividade, ver a atividade criada
-GET  http://localhost:3333/trips/38787f5d-2299-4bc3-8d44-a3a8eaf536ed/activities
+### Confirmacao da atividade, ver a atividade criada - list - GET
+GET  http://localhost:3333/trips/424a263b-8c29-4ef4-99e0-feb2597a4d2f/activities
 //     "trip_id": "38787f5d-2299-4bc3-8d44-a3a8eaf536ed"
 //      "id": "ddaebf77-224f-4043-bc66-ce3684acc87b",
 
 
 
 ### Criar Links - createLink
-POST http://localhost:3333/trips/38787f5d-2299-4bc3-8d44-a3a8eaf536ed/links
+POST http://localhost:3333/trips/424a263b-8c29-4ef4-99e0-feb2597a4d2f/links
 Content-Type: application/json
 
 {
-  "title": "Reserv Booking",
+  "title": "Reserv Booking2",
   "url": "https://booking.com/room5"
 }
 //  "linkId": "0c178f9f-fdb8-4d30-bef0-4146d02937ba"
+
+### list Links - GET
+GET  http://localhost:3333/trips/424a263b-8c29-4ef4-99e0-feb2597a4d2f/links
+//  "id": "0c178f9f-fdb8-4d30-bef0-4146d02937ba",
+//  "trip_id": "38787f5d-2299-4bc3-8d44-a3a8eaf536ed"
+
+
+//Particpants
+### listar Participants - getParticipants
+GET http://localhost:3333/trips/424a263b-8c29-4ef4-99e0-feb2597a4d2f/participants
+Content-Type: application/json
+
+
+//Invite
+### listar Invites - createInvite
+POST  http://localhost:3333/trips/424a263b-8c29-4ef4-99e0-feb2597a4d2f/invites
+Content-Type: application/json
+{
+  "email": "jhon@gamil.com" 
+}
+
+//update trip (PUT)   => updateTrip 
+### Update trips
+PUT http://localhost:3333/trips/424a263b-8c29-4ef4-99e0-feb2597a4d2f
+Content-Type: application/json
+
+{
+  "destination": "Bahia - Salvador - Floripa",
+  "starts_at": "2024-07-15 18:00:00",
+  "ends_at": "2024-07-27 18:00:00"
+}
+
