@@ -1,4 +1,4 @@
-import { MapPin, Calendar } from "lucide-react";
+import { MapPin, Calendar, Settings2 } from "lucide-react";
 import { Button } from "../../components/button";
 
 export function DestinationAndDateHeader() {
@@ -18,7 +18,11 @@ export function DestinationAndDateHeader() {
 
         <div className="w-px h-6 bg-zinc-800" />
 
-        <Button />
+        <Button variant="secondary">
+        Alter Local/Date
+        <Settings2 className="size-5" />
+        </Button>
+        
       </div>
     </div>
 
