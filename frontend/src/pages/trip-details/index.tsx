@@ -1,6 +1,23 @@
-import { Calendar, CircleCheck, MapPin, Plus, Settings2 } from "lucide-react";
+import { Calendar, CircleCheck, CircleCheckIcon, CircleDashed, Link2,  MapPin, Plus, Settings2, UserCogIcon } from "lucide-react";
+import { useState } from "react";
+
+
 
 export function TripDetailsPage() {
+  const [isCreateActivityModalOpen, setIsCreateActivityModalOpen] = useState(false)
+
+  function openCreateActivityModal() {
+    setIsCreateActivityModalOpen(true)
+  }
+
+  function closeCreateActivityModal() {
+    setIsCreateActivityModalOpen(false)
+  }
+
+
+
+
+  
   return (
     <div className="max-w-6xl px-6 py-10 mx-auto space-y-8 ">
       <div className="px-4 h-16 rounded-xl bg-zinc-900 shadow-shape flex items-center justify-between ">
@@ -56,30 +73,89 @@ export function TripDetailsPage() {
               <div className="-space-y-2.5">
                 <div className=" px-4 py-2.5 bg-zinc-900 rounded-xl shadow-shape flex items-center gap-3">
                   <CircleCheck className="size-5 text-lime-300" />
-                  <span className="text-zinc-100">Group gym</span>            
+                  <span className="text-zinc-100">Group gym</span>
                   <span className="text-zinc-400 text-sm ml-auto">8:00</span>
-              
                 </div>
               </div>
 
               <div className="-space-y-2.5">
                 <div className=" px-4 py-2.5 bg-zinc-900 rounded-xl shadow-shape flex items-center gap-3">
                   <CircleCheck className="size-5 text-lime-300" />
-                  <span className="text-zinc-100">Group gym</span>            
+                  <span className="text-zinc-100">Group gym</span>
                   <span className="text-zinc-400 text-sm ml-auto">8:00</span>
-              
                 </div>
               </div>
-              
             </div>
           </div>
         </div>
 
-        <div className="w-80">
+        <div className="w-80 space-y-6">
+          <div className="space-y-6">
+            <h2 className="font-semibold text-xl">Important Links</h2>
+            <div className="space-y-5">
+              <div className="flex items-center justify-between gap-4">
+                <div className="space-y-1.5">
+                  <span className="block font-medium text-zinc-100">AirBnB reservation</span>
+                   <a href="#" className="block text-xs text-zinc-400 truncate hover:text-zinc-200">
+                    https://www.airbnb.com.br/rooms/1047000111212333333221123322
+                    </a>
+                </div>
+                <Link2 className="text-zinc-400 size-5 shrink-0" />
+              </div>
+
+              <div className="flex items-center justify-between gap-4">
+                <div className="space-y-1.5">
+                  <span className="block font-medium text-zinc-100">Rules of the house</span>
+                   <a href="#" className="block text-xs text-zinc-400 truncate hover:text-zinc-200">
+                   https://www.notion.com/pages/104700047000111212333333221123322
+                    </a>
+                </div>
+                <Link2 className="text-zinc-400 size-5 shrink-0" />
+              </div>
+
+            </div>
+            <button className=" bg-zinc-800 w-full justify-center text-zinc-200 rounded-lg px-5 h-11 font-medium flex items-center gap-2 hover:bg-zinc-700">
+              <Plus className="size-5" />
+              Add New Link
+            </button>
+          </div>
+          <div className="w-full h-px bg-zinc-800" />
+          
+          
+          <div className="space-y-6">
+            <h2 className="font-semibold text-xl">Guests</h2>
+            <div className="space-y-5">
+              <div className="flex items-center justify-between gap-4">
+                <div className="space-y-1.5">
+                  <span className="block font-medium text-zinc-100">Jessica White</span>
+                   <span className="block text-sm text-zinc-400 truncate">
+                   jessica.white44@yahoo.com
+                    </span>
+                </div>
+                <CircleDashed className="text-zinc-400 size-5 shrink-0" />
+              </div>
+
+              <div className="flex items-center justify-between gap-4">
+                <div className="space-y-1.5">
+                  <span className="block font-medium text-zinc-100">Dr. Rita Pacocha</span>
+                   <span className="block text-sm text-zinc-400 truncate">
+                   lacy.stiedemann@gmail.com
+                    </span>
+                </div>
+                <CircleCheckIcon className="text-zinc-400 size-5 shrink-0" />
+              </div>
+
+            </div>
+            <button className=" bg-zinc-800 w-full justify-center text-zinc-200 rounded-lg px-5 h-11 font-medium flex items-center gap-2 hover:bg-zinc-700">
+              <UserCogIcon className="size-5" />
+              Manage guests
+            </button>
+          </div>
+
+
 
         </div>
       </main>
     </div>
-
   )
 }
