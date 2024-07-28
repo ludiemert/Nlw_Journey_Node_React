@@ -7,9 +7,11 @@ import { format } from 'date-fns'
 
 interface DestinationAndDateStepProps {
   isGuestsInputOpen: boolean
+  eventStartAndEndDates: DateRange | undefined
   closeGuestsInput: () => void //function que nao tem parametro
   openGestsInput: () => void
   setDestination: (destination: string) => void
+  setEventStartAndEndDates: (dates: DateRange | undefined) => void
 }
 
 export function DestinationAndDateStep({
@@ -17,10 +19,11 @@ export function DestinationAndDateStep({
   openGestsInput,
   isGuestsInputOpen,
   setDestination,
+  eventStartAndEndDates,
+  setEventStartAndEndDates,
 }: DestinationAndDateStepProps) {
   const [isDatePickerOpen, setIsDatePickerOpen] = useState(false)
-  const [eventStartAndEndDates, setEventStartAndEndDates] = useState<DateRange | undefined>()
-
+ 
   function openDatePicker() {
     return setIsDatePickerOpen(true)
     }
