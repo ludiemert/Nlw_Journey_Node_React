@@ -7,5 +7,12 @@
 }
 
 input {
-  color-scheme:dark;
+  color-scheme: dark;
+}
+
+
+.rdp-root {
+  --rdp-accent-color: #BEF264; /*  //color Date Calender Change the accent color to indigo. */
+  --rdp-accent-background-color: #f0f0f0; /* Change the accent background color. */
+  /* Add more CSS variables here. */
 }

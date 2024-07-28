@@ -98,7 +98,7 @@ export function CreateTripPage() {
         <div className="flex flex-col items-center gap-3">
           <img src="/logo.svg" alt="plann.er" />
           <p className="text-zinc-300 text-lg">
-            Convide seus amigos e planeje sua próxima viagem!
+            Invite your friends and plan your next trip!😎😎😊😉
           </p>
         </div>
 
@@ -125,8 +125,8 @@ export function CreateTripPage() {
 
 
         <p className="text-sm text-zinc-500">
-          Ao planejar sua viagem pela plann.er você automaticamente concorda <br />
-          com nossos <a className="text-zinc-300 underline" href="#"> termos de uso </a> e <a className="text-zinc-300 underline" href="#"> políticas de privacidade. </a>
+          When planning your plann.er you automatically agree <br />
+          with our <a className="text-zinc-300 underline" href="#"> terms of use </a> e <a className="text-zinc-300 underline" href="#"> privacy policies!😉🥰 </a>
         </p>
 
 
