@@ -3,9 +3,9 @@ POST http://localhost:3333/trips
 Content-Type: application/json
 
 {
-  "destination": "Bahia",
-  "starts_at": "2024-07-11 18:00:00",
-  "ends_at": "2024-07-10 18:00:00"
+  "destination": "Alagoas",
+  "starts_at": "2024-07-30 18:00:00",
+  "ends_at": "2024-07-31 18:00:00"
 }
 
 
@@ -14,9 +14,9 @@ POST http://localhost:3333/trips
 Content-Type: application/json
 
 {
-  "destination": "Bahia",
-  "starts_at": "2024-07-11 18:00:00",
-  "ends_at": "2024-07-15 18:00:00",
+  "destination": "Alagoas",
+  "starts_at": "2024-07-31 18:00:00",
+  "ends_at": "2024-08-15 18:00:00",
   "owner_name": "Lu Reis",
   "owner_email": "lu@gmail.com"
 }
