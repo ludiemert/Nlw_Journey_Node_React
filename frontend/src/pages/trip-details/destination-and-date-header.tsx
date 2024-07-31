@@ -24,8 +24,8 @@ export function DestinationAndDateHeader() {
 
 
   const displayedDate = trip
-  ? format(trip.starts_at, "d 'of 'LLL").concat(' to ').concat(format(trip.ends_at, "d 'the 'LLL"))
-  : null
+    ? format(trip.starts_at, "d 'of 'LLL").concat(' to ').concat(format(trip.ends_at, "d 'the 'LLL"))
+    : null
 
 
 
@@ -46,10 +46,10 @@ export function DestinationAndDateHeader() {
         <div className="w-px h-6 bg-zinc-800" />
 
         <Button variant="secondary">
-        Alter Local/Date
-        <Settings2 className="size-5" />
+          Alter Local/Date
+          <Settings2 className="size-5" />
         </Button>
-        
+
       </div>
     </div>
 
